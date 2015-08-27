@@ -1,0 +1,31 @@
+<div class = "movieDiv" ng-if="details.Response === 'True'">
+  <img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/200x220?text=N/A' : 'http://imdb.wemakesites.net/api/1.0/img/?url='+details.Poster }}" class="movie-poster">
+
+  <span class="span-outer">
+    <a href="http://imdb.com/title/{{ details.imdbID }}" target="_blank">{{ details.Title }}</a>
+  </span>, {{ details.Year }}
+
+  <p><strong>Released on: </strong>{{ details.Released }}</p>
+
+  <p>{{ details.Plot }}</p>
+
+  <p class="detailsP">
+    <div class="innerP">
+      <span class="label label-primary">Director :</span> {{ details.Director }}
+    </div>
+    <div class="innerP">
+      <span class="label label-primary">Actors :</span> {{ details.Actors }}
+    </div>
+    <div class="innerP">
+      <span class="label label-primary">Genre :</span> {{ details.Genre }}
+    </div>
+  </p>
+
+  <p class="ratingP">Ratings:<br>
+    <strong>IMDb Rating</strong>: <span class="label label-success">{{ details.imdbRating }}</span><br>
+  </p>
+</div>
+
+<div ng-if="details.Response==='False'">
+  No results found.
+</div>

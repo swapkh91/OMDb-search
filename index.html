@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="movieCntrl">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OMDb Search</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <h1 align = "center">OMDb - The Front</h1>
+    <div align = "center" class="container-fluid mainDiv">
+        <div class="input-group search-bar">
+          <input type="text" ng-model="search" ng-change="searchMovie()" onclick="select()" class="form-control" placeholder="Enter movie name" autofocus />
+        </div>
+    </div>
+    <div class="results">
+    <ul ng-show = "search">
+      <span>Movies with title containing '{{search}}'</span>
+      <br>
+      <li ng-repeat="movie in results.Search">
+        <a href="#" id="{{ $index + 1 }}" ng-click="showMovie(movie)">{{ movie.Title }}
+        </a>, {{ movie.Year }}
+      </li>
+    </ul>
+    </div>
+    <div id="main-info" ng-include="'main.html'" class="col-md-12"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+body {
+  background-color: #fff;
+  background-repeat: repeat !important;
+  background-attachment: fixed;
+}
+
+.mainDiv {
+  margin-top:70px;
+}
+
+.search-bar {
+  width:100%;
+  max-width:500px;
+  margin-bottom: 25px;
+}
+
+.results {
+  padding-left: 400px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.movie-poster {
+  float:left;
+  width: 150px;
+  margin-right: 10px;
+  transition: width 1s;
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+}
+
+.movie-poster:hover {
+  width: 250px;
+}
+
+.span-outer {
+  font-size:20px;
+}
+
+.detailsP {
+  margin-top: 30px;
+}
+
+.innerP {
+  margin:2px;
+}
+
+.ratingP {
+  margin-top: 5px;
+}
