@@ -15,15 +15,15 @@ angular.module('myApp', [])
     };
 
     function fetchClick() {
-      $http.get("http://www.omdbapi.com/?t=" + $scope.search + "&plot=full")
+      $http.get("https://www.omdbapi.com/?t=" + $scope.search + "&plot=full")
        .success(function(response){ $scope.details = response; });
 
-       $http.get("http://www.omdbapi.com/?s=" + $scope.search + "&type=movie")
+       $http.get("https://www.omdbapi.com/?s=" + $scope.search + "&type=movie")
        .success(function(response){  $scope.results = response; });
     }
 
     function fetch() {
-      $http.get("http://www.omdbapi.com/?s=" + $scope.search + "&type=movie")
+      $http.get("https://www.omdbapi.com/?s=" + $scope.search + "&type=movie")
        .success(function(response){  $scope.results = response; });
     }
 
